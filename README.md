@@ -1,6 +1,7 @@
 # 🚀 Exemplos de Testes com Cypress
 
-Este repositório contém exemplos de testes automatizados utilizando **Cypress**, abordando diferentes cenários e boas práticas para testes end-to-end (E2E).
+Este repositório contém exemplos de testes automatizados utilizando **Cypress**, ele foi criado com o intuito de mostrar um pouco dos meus estudos com o framework, onde pretendo atualizá-lo
+cada vez mais
 
 ## 📦 Instalação
 
@@ -8,8 +9,8 @@ Para rodar os testes localmente, siga os passos abaixo:
 
 1. **Clone o repositório**:
    ```bash
-   git clone https://github.com/seu-usuario/cypress-examples.git
-   cd cypress-examples
+   git clone https://github.com/KervinLima/AutomacoesCypress
+   cd AutomacoesCypress-main
    ```
 
 2. **Instale as dependências**:
@@ -32,53 +33,19 @@ Para rodar os testes localmente, siga os passos abaixo:
 ## 📁 Estrutura do Projeto
 
 ```
-cypress-examples/
+AutomacoesCypress-main
 │── cypress/
-│   ├── e2e/                 # Testes de exemplo
-│   │   ├── login.cy.js       # Teste de login
+│   ├── e2e/                  # Testes de exemplo
 │   │   ├── cadastro.cy.js    # Teste de cadastro de usuário
-│   │   ├── checkout.cy.js    # Teste de fluxo de compra
+│   │   ├── comprar.cy.js     # Teste de fluxo de compra
+│   │   ├── login.cy.js       # Teste de login
+│   ├── e2e/api               # Testes de exemplo
 │   ├── fixtures/             # Dados mockados para os testes
 │   ├── support/              # Comandos e funções auxiliares
 │── cypress.config.js         # Configuração do Cypress
 │── package.json              # Dependências do projeto
 │── README.md                 # Documentação do repositório
 ```
-
----
-
-## 🧪 Exemplos de Testes
-
-### 🔹 **Teste de Login**
-Arquivo: `cypress/e2e/login.cy.js`
-```javascript
-describe('Teste de Login', () => {
-  it('Deve realizar login com sucesso', () => {
-    cy.visit('https://exemplo.com/login');
-    cy.get('#email').type('usuario@exemplo.com');
-    cy.get('#password').type('senha123');
-    cy.get('button[type="submit"]').click();
-    cy.contains('Bem-vindo').should('be.visible');
-  });
-});
-```
-
-### 🔹 **Teste de Cadastro**
-Arquivo: `cypress/e2e/cadastro.cy.js`
-```javascript
-describe('Teste de Cadastro', () => {
-  it('Deve cadastrar um novo usuário', () => {
-    cy.visit('https://exemplo.com/cadastro');
-    cy.get('#nome').type('João Silva');
-    cy.get('#email').type('joao@exemplo.com');
-    cy.get('#senha').type('senhaSegura');
-    cy.get('#confirmarSenha').type('senhaSegura');
-    cy.get('button[type="submit"]').click();
-    cy.contains('Cadastro realizado com sucesso').should('be.visible');
-  });
-});
-```
-
 ---
 
 ## 🛠️ Tecnologias Utilizadas
@@ -92,8 +59,4 @@ describe('Teste de Cadastro', () => {
 
 ## 📄 Licença
 Este projeto está licenciado sob a [MIT License](LICENSE).
-
----
-
-Se precisar de mais alguma coisa, me avise! 🚀
 
