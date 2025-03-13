@@ -17,7 +17,7 @@ describe("Login", () => {
         cy.get('#swal2-title').should("have.text", "Login realizado");
     });
 
-    it.only("Logout com sucesso", () => {
+    it("Logout com sucesso", () => {
      
         cy.visit("https://automationpratice.com.br/login");
 
