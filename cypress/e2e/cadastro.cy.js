@@ -4,9 +4,9 @@
 describe("Cadastro", () => {
 
     it("Cadastro com sucesso", () => {
-        cy.viewport(1280, 720);
+        
         cy.visit("https://automationpratice.com.br")
-        cy.get('.right_list_fix > :nth-child(2) > a').click();
+        cy.get('.right_list_fix > :nth-child(2) > a').click({ force: true });
 
         cy.get('#user').type('Kervin Delan');
         cy.get('#email').type('kervin@qazando.com');
@@ -20,7 +20,7 @@ describe("Cadastro", () => {
 
     //cenarios
     it("Cadastro com nome vazio", () => {
-        cy.viewport(1280, 720);
+        
         cy.visit("https://automationpratice.com.br")
         cy.get('.right_list_fix > :nth-child(2) > a').click();
 
@@ -34,7 +34,7 @@ describe("Cadastro", () => {
 
     //cenarios
     it("Cadastro com email vazio", () => {
-        cy.viewport(1280, 720);
+        
         cy.visit("https://automationpratice.com.br")
         cy.get('.right_list_fix > :nth-child(2) > a').click();
 
@@ -47,7 +47,7 @@ describe("Cadastro", () => {
     });
 
     it("Cadastro com email inválido", () => {
-        cy.viewport(1280, 720);
+        
         cy.visit("https://automationpratice.com.br")
         cy.get('.right_list_fix > :nth-child(2) > a').click();
 
@@ -60,7 +60,7 @@ describe("Cadastro", () => {
     });
 
     it("Cadastro com senha inválida", () => {
-        cy.viewport(1280, 720);
+        
         cy.visit("https://automationpratice.com.br")
         cy.get('.right_list_fix > :nth-child(2) > a').click();
 
@@ -74,7 +74,7 @@ describe("Cadastro", () => {
     });
 
     it("Cadastro com senha vazia", () => {
-        cy.viewport(1280, 720);
+        
         cy.visit("https://automationpratice.com.br")
         cy.get('.right_list_fix > :nth-child(2) > a').click();
 

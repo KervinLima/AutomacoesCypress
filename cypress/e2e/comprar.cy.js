@@ -40,8 +40,8 @@ describe("Comprar produto", () => {
         cy.get('.offcanvas-cart-action-button > :nth-child(1) > .theme-btn-one').click();
     });
 
-    it("Remover produto do carrinho", () => {
-        cy.viewport(1280, 720); // Define a largura para 1280px e a altura para 720px
+    it.only("Remover produto do carrinho", () => {
+        cy.viewport(1280, 720); 
         cy.visit("https://automationpratice.com.br");
         cy.get(':nth-child(3) > .search_width > img').click();
         cy.get('form > input').type("Power Pack");

@@ -6,7 +6,7 @@ describe("Login", () => {
     //cenarios
     
     it("Login com sucesso", () => {
-        cy.viewport(1280, 720);
+
         cy.visit("https://automationpratice.com.br/login");
 
         cy.get('#user').type('edu@qazando.com');
@@ -19,7 +19,7 @@ describe("Login", () => {
     });
 
     it("Logout com sucesso", () => {
-        cy.viewport(1280, 720);
+
         cy.visit("https://automationpratice.com.br/login");
 
         cy.get('#user').type('edu@qazando.com');
@@ -38,7 +38,7 @@ describe("Login", () => {
     });
 
     it("Email invalido", () => {
-        cy.viewport(1280, 720);
+
         cy.visit("https://automationpratice.com.br/login");
         cy.get('#user').type('edu@.com');
         cy.get('#password').type('123456');
@@ -47,7 +47,7 @@ describe("Login", () => {
     });
 
     it("Senha invalida", () => {
-        cy.viewport(1280, 720);
+
         cy.visit("https://automationpratice.com.br/login");
         cy.get('#user').type('edu@qazando.com');
         cy.get('#password').type('123');
@@ -56,7 +56,7 @@ describe("Login", () => {
     });
 
     it("Email vazio", () => {
-        cy.viewport(1280, 720);
+
         cy.visit("https://automationpratice.com.br/login");
         cy.get('#password').type('123456');
         cy.get('#btnLogin').click();
@@ -64,7 +64,7 @@ describe("Login", () => {
     });
 
     it("Senha vazia", () => {
-    cy.viewport(1280, 720);
+
         cy.visit("https://automationpratice.com.br/login");
         cy.get('#user').type('edu@qazando.com');
         cy.get('#btnLogin').click();
